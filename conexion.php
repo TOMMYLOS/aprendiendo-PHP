@@ -8,7 +8,7 @@ try {
 
     $pdo = new PDO($link,$usuario,$pass);
 
-    echo 'Conectado';
+    //echo 'Conectado';
 
     //foreach($pdo->query('SELECT * FROM `colores`') as $fila) {
       //  print_r($fila);
