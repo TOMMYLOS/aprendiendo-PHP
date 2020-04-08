@@ -59,7 +59,7 @@ if($_POST){
             </div>
 
             <div class="cold-md-6">
-                  <?php if($_GET):?>
+                  <?php if(!$_GET):?>
                   <h2>AGREGAR ELEMENTOS</h2>
                   <form method="POST">
                         <input type="text" class="form-control" name="color">
