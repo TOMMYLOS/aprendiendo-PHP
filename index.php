@@ -50,7 +50,9 @@ if($_POST){
                      -
                      <?php echo $dato ['descripcion'] ?>
 
-                     <a href=""><i class="fas fa-pencil-alt"></i></a>
+                     <a href="index.php?id=<?php echo $dato ['id'] ?>" 
+                     class="float-right">
+                     <i class="fas fa-pencil-alt"></i></a>
                 </div>
 
                 <?php endforeach ?>
