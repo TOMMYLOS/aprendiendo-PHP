@@ -22,6 +22,19 @@ if($_POST){
 
       header('location:index.php');
 }
+
+if($_GET){
+  $id = $_GET['id'];
+  $sql_unico = 'SELECT * FROM colores WHERE id=?';
+
+  $gsent_unico = $pdo->prepare($sql_unico);
+  $gsent_unico->execute(array($id));
+
+  $resultado_unico = $gsent_unico->fetch();
+
+  //var_dump($resultado_unico);
+
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -68,6 +81,21 @@ if($_POST){
 
                   </form>
                   <?php endif ?>
+
+                  <?php if($_GET):?>
+                  <h2>EDITAR ELEMENTOS</h2>
+                  <form method="GET" action="editar.php"> 
+                        <input type="text" class="form-control" name="color"
+                        value="<?php echo $resultado_unico['color']?>">
+                        <input type="text" class="form-control mt-4" name="descripcion"
+                        value="<?php echo $resultado_unico['descripcion']?>">
+                        <input type="hidden" name="id"
+                        value="<?php echo $resultado_unico['id']?>">
+                        <button class="btn btn-primary mt-5">Agregar</button>
+
+                  </form>
+                  <?php endif ?>
+
             </div>
 
 
