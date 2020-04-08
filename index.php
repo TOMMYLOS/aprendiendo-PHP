@@ -59,6 +59,7 @@ if($_POST){
             </div>
 
             <div class="cold-md-6">
+                  <?php if($_GET):?>
                   <h2>AGREGAR ELEMENTOS</h2>
                   <form method="POST">
                         <input type="text" class="form-control" name="color">
@@ -66,6 +67,7 @@ if($_POST){
                         <button class="btn btn-primary mt-5">Agregar</button>
 
                   </form>
+                  <?php endif ?>
             </div>
 
 
